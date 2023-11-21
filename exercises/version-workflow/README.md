@@ -1,4 +1,4 @@
-# Exercise #1: Version the Change with the `Patching` API
+# Exercise #1: Versioning Workflows with the Patching API
 
 During this exercise, you will
 

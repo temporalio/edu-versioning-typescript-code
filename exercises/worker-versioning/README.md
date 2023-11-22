@@ -19,9 +19,6 @@ temporal server start-dev \
    --dynamic-config-value worker.buildIdScavengerEnabled=true
 ```
 
-You can also provide these parameters to a cluster in a YAML file. An
-example is provided in `enable_worker_versioning.yaml`.
-
 Make your changes to the code in the `practice` subdirectory (look for
 `TODO` comments that will guide you to where you should make changes to
 the code). If you need a hint or want to verify your changes, look at

@@ -6,7 +6,7 @@ During this exercise, you will
 - Make and deploy a change that does not affect compatibility
 - Make and deploy a change that breaks compatibility, causing a non-deterministic error
 - Develop an automated test to check compatibility with previous executions
-- Use the `Patching` API to implement versioning for the Workflow
+- Use the Patching API to implement versioning for the Workflow
 
 Make your changes to the code in the `practice` subdirectory (look for
 `TODO` comments that will guide you to where you should make changes to
@@ -103,11 +103,11 @@ and responds by throwing the non-deterministic error you see.
 4. Run `npm test`. You should find that this fails, which confirms
    altering the execution order of the `sendThankYouToCustomer`
    Activity breaks compatibility. In the final part of this
-   exercise, you will use the `Patching` API to implement
+   exercise, you will use the Patching API to implement
    versioning for your change, thereby making it compatible
    with Workflow Executions started before or after the change.
 
-## Part D: Version the Change with the `Patching` API
+## Part D: Version the Change with the Patching API
 
 Open `src/workflows.ts`.
 

@@ -21,7 +21,7 @@ tasks:
       echo "waiting for server...."
       clear
       source .bash_aliases
-      /workspace/bin/temporal server start-dev --db-filename your_temporal.db --ui-port 8080
+      /workspace/bin/temporal server start-dev --dynamic-config-value frontend.workerVersioningDataAPIs=true --dynamic-config-value frontend.workerVersioningWorkflowAPIs=true --dynamic-config-value worker.buildIdScavengerEnabled=true --ui-port 8080 --db-filename $HOME/.cluster-persistence.db
   - name: Worker
     command: |
       gp ports await 7233 && gp ports await 8080 && sleep 25 && gp preview $(gp url 8080)

@@ -1,7 +1,7 @@
 # Code Repository for Temporal Versioning (TypeScript)
 This repository provides code used for exercises and demonstrations
 included in the TypeScript version of the 
-[Versioning](https://learn.temporal.io/courses/temporal_102/versioning) 
+[Versioning](https://learn.temporal.io/courses/versioning) 
 training course.
 
 

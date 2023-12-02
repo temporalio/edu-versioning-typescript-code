@@ -5,7 +5,9 @@ import { NativeConnection, Worker } from '@temporalio/worker';
 async function run() {
   const connection = await NativeConnection.connect({ address: 'localhost:7233' });
 
-  // TODO Part B: In the object being passed into Worker.create(), add a `buildId` key and set it to a build ID string. Also add a `useVersioning` key and set it to true.
+  // TODO Part B: In the object being passed into Worker.create(), add a `buildId` key
+  // Set it to a build ID string.
+  // Also add a `useVersioning` key and set it to true.
 
   const worker = await Worker.create({
     taskQueue: TASK_QUEUE_NAME,

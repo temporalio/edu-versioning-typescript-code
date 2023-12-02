@@ -2,18 +2,18 @@
 
 During this exercise, you will
 
-- Run a Workflow Execution and retrieve the Event History.
-- Define Worker Build ID Version Sets and enable Versioning on your Worker.
-- Make a change to your Workflow, and redeploy an updated Worker.
-- Ensure that your Workflows have switched to using the new code path.
-- Decommission an old Worker.
+- Run a Workflow Execution and retrieve the Event History
+- Define Worker Build ID Version Sets and enable Versioning on your Worker
+- Make a change to your Workflow, and redeploy an updated Worker
+- Ensure that your Workflows have switched to using the new code path
+- Decommission an old Worker
 
-If you are running this Exercise using a local dev server, you will need to
+If you are running this exercise using a local dev server, you will need to
 enable Worker Versioning on server startup, as it is not enabled by default.
-To do this, run `temporal server start dev` with additional parameters:
+To do this, run `temporal server start-dev` with additional parameters:
 
 ```shell
-temporal server start-dev \
+temporal server start-dev --ui-port 8080 \
    --dynamic-config-value frontend.workerVersioningDataAPIs=true \
    --dynamic-config-value frontend.workerVersioningWorkflowAPIs=true \
    --dynamic-config-value worker.buildIdScavengerEnabled=true
@@ -38,14 +38,14 @@ the Event History.
 3. Let this Workflow run to completion. Because this is an example
    and does not actually order any real pizzas, it should complete
    almost instantly. If you are running
-   a local dev cluster, it will be running at http://localhost:8233.
+   a local dev cluster, it will be running at http://localhost:8080.
 
 ## Part B: Assign a Build ID to your Worker and Task Queue
 
 1. Edit the `worker.ts` file to add a Build ID to your Worker
    and opt in to Worker Versioning. To do this, add any string that you would like to use as your Build ID into the object passed into `Worker.create()` as well as `useVersioning: true`.
 2. Edit the `client.ts` file to call
-   `updateWorkerBuildIdCompatibility()` before starting your
+   `updateBuildIdCompatibility()` before starting your
    Workflow.
 3. Run a new version of your worker by running `npm start`
    in a new terminal window. You do not need to terminate your old
@@ -95,7 +95,7 @@ the Event History.
    thing by running `temporal task-queue update-build-ids` with
    matching parameters.
 2. Assume you are adding another new Worker Version that is compatible with the
-   Version that you added in Part B. To do this, try running:
+   Version that you added in Part B. To do this, execute a command similar to the one below, but specify the new build ID of your choice in the --build-id option and replace the value of the --existing-compatible-build-id option with the build ID you chose earlier:
 
    ```shell
    temporal task-queue update-build-ids add-new-compatible \

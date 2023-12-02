@@ -14,7 +14,7 @@ async function run() {
   // a currently running workflow. An example of how to do it via the SDK is
   // below. Don't forget to change the BuildID to match your Worker.
   //
-  // await client.taskQueue.updateBuildIdCompatibility('your_task_queue_name', {
+  // await client.taskQueue.updateBuildIdCompatibility(TASK_QUEUE_NAME, {
   //   operation: 'addNewIdInNewDefaultSet',
   //   buildId: 'deadbeef',
   // });
@@ -23,7 +23,7 @@ async function run() {
   // compatible Build ID to the same Task Queue. This can be done if you are
   // making backwards-compatible changes to your Workers.
   //
-  // await client.taskQueue.updateBuildIdCompatibility('your_task_queue_name', {
+  // await client.taskQueue.updateBuildIdCompatibility(TASK_QUEUE_NAME, {
   //   operation: 'addNewCompatibleVersion',
   //   buildId: 'deadbeef',
   //   existingCompatibleBuildId: 'some-existing-build-id',
@@ -34,7 +34,7 @@ async function run() {
   const handle = await client.workflow.start(pizzaWorkflow, {
     args: [order],
     taskQueue: TASK_QUEUE_NAME,
-    workflowId: `pizza-workflow-order-${order.orderNumber},`,
+    workflowId: `pizza-workflow-order-${order.orderNumber}`,
   });
 
   console.log(`Started workflow ${handle.workflowId}`);

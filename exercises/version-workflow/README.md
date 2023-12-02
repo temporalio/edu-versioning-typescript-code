@@ -42,8 +42,9 @@ You'll need two terminal windows for this exercise.
      used in that environment. In this case, run the following
      command from the `practice` directory:
      `temporal workflow show \
---workflow-id loan-processing-workflow-customer-a100 \
---output history_for_original_execution.json`
+ --workflow-id loan-processing-workflow-customer-a100 \
+ --fields long \
+ --output json > history_for_original_execution.json`
      to retrieve a copy.
 5. In the next section, you will make and deploy an incompatible
    change, causing a non-deterministic error for an open execution.
@@ -144,18 +145,6 @@ Now do the following tasks to complete the exercise:
    the previous execution.
 3. Restart the Worker by pressing `Ctrl-C` in the terminal
    window where you started it and then running the `npm start` command again.
-4. Return to the detail page for this Workflow Execution
-5. Click the downward-facing arrow to the right of the
-   **Request Cancellation** menu near the upper-right portion of
-   the page and select the **Reset** option.
-   - Reset the Workflow to the ID of the last Workflow task completed.
-   - Enter "Using versioning to fix a bad deployment" as the reason
-   - Click the **Confirm** button
-6. Follow the **here** link in the confirmation message shown
-   at the top of the screen, which points to the new Workflow
-   Execution created when you reset the Workflow.
-7. Enable the auto-refresh feature using the toggle button near
-   the top of the page. You should find that the Workflow Execution
-   completes successfully within the next 30 seconds.
+4. Return to the detail page for this Workflow Execution.
 
 ### This is the end of the exercise.

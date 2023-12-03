@@ -25,7 +25,4 @@ clicking the button below:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/temporalio/edu-versioning-typescript-code)
 
-Alternatively, you can follow 
-[these instructions](https://learn.temporal.io/getting_started/typescript/dev_environment/) to 
-set up your own Temporal Cluster with Docker Compose, which you can use as an 
-exercise environment.
+Alternatively, you can perform these exercises directly on your computer. Refer to the instructions about setting up a local development environment, which you'll find in the "About this Course" chapter.

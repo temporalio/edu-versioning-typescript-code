@@ -4,7 +4,6 @@ During this exercise, you will
 
 - Run a Workflow Execution and retrieve the Event History
 - Define Worker Build ID Version Sets and enable Versioning on your Worker
-- Make a change to your Workflow, and redeploy an updated Worker
 - Ensure that your Workflows have switched to using the new code path
 - Decommission an old Worker
 

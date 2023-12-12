@@ -5,7 +5,7 @@ import { before, describe, it } from 'mocha';
 // import { Worker } from '@temporalio/worker';
 // import fs from 'fs';
 
-describe('SayHelloGoodbye workflow', () => {
+describe('Loan processing workflow', () => {
   let testEnv: TestWorkflowEnvironment;
 
   before(async () => {

@@ -30,12 +30,15 @@ You'll need two terminal windows for this exercise.
    a Timer to add a three-second delay between each payment, it
    should complete within 30 seconds.
 4. You will now download the history of this execution in JSON
-   format so that you can replay it in an automated test that
-   you will develop later in this exercise. Open the Web UI,
-   navigate to the detail page for this execution, and then click
-   the **Download** button that appears on the right side of the
-   page, just above the table showing the Event History.
-   Save the file as `history_for_original_execution.json` in your
+   format so that you can replay it in an automated test that you
+   will develop later in this exercise. Open the Web UI (if you are
+   running a local dev cluster, it will be running at
+   http://localhost:8233), navigate to the **Event History** section
+   of the detail page for this execution, and then click the
+   **Download** button just above the table showing the Event History.
+   In the **Download JSON** dialog, disable the
+   **Decode Event History** toggle, and then click **Download**. Save
+   the file as `history_for_original_execution.json` in your
    `practice` directory.
    - NOTE: If you are running this exercise in GitPod, download the file using the following command from the `practice` directory:
      `temporal workflow show \

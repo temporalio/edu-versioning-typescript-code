@@ -41,10 +41,7 @@ You'll need two terminal windows for this exercise.
    the file as `history_for_original_execution.json` in your
    `practice` directory.
    - NOTE: If you are running this exercise in GitPod, download the file using the following command from the `practice` directory:
-     `temporal workflow show \
---workflow-id loan-processing-workflow-customer-a100 \
---fields long \
---output json > history_for_original_execution.json`
+     `temporal workflow show --workflow-id loan-processing-workflow-customer-a100 --fields long --output json > history_for_original_execution.json`
      to retrieve a copy.
 5. In the next section, you will make and deploy an incompatible
    change, causing a non-deterministic error for an open execution.

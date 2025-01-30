@@ -40,7 +40,7 @@ You'll need two terminal windows for this exercise.
    and then click **Download**. Save
    the file as `history_for_original_execution.json` in your
    `practice` directory.
-   - NOTE: If you are running this exercise in GitPod, download the file using the following command from the `practice` directory:
+   - NOTE: If you are running this exercise in Codespaces, download the file using the following command from the `practice` directory:
      `temporal workflow show \ 
      --workflow-id loan-processing-workflow-customer-a100 \ --output json > history_for_original_execution.json`
      to retrieve a copy.
